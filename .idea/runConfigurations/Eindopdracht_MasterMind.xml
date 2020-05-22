@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Eindopdracht_MasterMind" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="MasterMind_Server" />
+    <option name="MAIN_CLASS_NAME" value="MasterMind_EtienneCode.MasterMind_Server" />
     <module name="Eindopdracht_MasterMind" />
     <method v="2">
       <option name="Make" enabled="true" />

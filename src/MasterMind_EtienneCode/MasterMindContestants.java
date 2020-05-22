@@ -1,3 +1,5 @@
+package MasterMind_EtienneCode;
+
 public interface MasterMindContestants {
     public static int PLAYER1 = 1;
     public static int PLAYER2 = 2;

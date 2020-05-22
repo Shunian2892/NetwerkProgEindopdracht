@@ -1,22 +1,19 @@
+package MasterMind_EtienneCode;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
 
 import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class MasterMind_Server {
+public class MasterMind_Server extends Application {
     private int port = 10000;
     private ServerSocket serverSocket;
     private Socket socket;
@@ -32,6 +29,7 @@ public class MasterMind_Server {
     }
 
     private void connect() {
+        Thread connectThread = new Thread();
 
         try {
             this.serverSocket = new ServerSocket(port);
@@ -65,12 +63,6 @@ public class MasterMind_Server {
 
     }
 
-//    public void sendToLastClient(){
-//        MasterMind_ServerClient lastClient = clients.get(clients.size()-1);
-//        lastClient.writeUTF("A game has already begun...");
-//    }
-
-
     public void sendToAllClients(String text) {
         for (MasterMind_ServerClient client : clients) {
 
@@ -103,5 +95,17 @@ public class MasterMind_Server {
 
     public ArrayList<MasterMind_ServerClient> getClients() {
         return clients;
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+//        TextArea readMessagesArea = new TextArea();
+//
+//        Scene scene = new Scene(new ScrollPane(readMessagesArea), 450, 200);
+//        primaryStage.setTitle("MasterMind_Server");
+//        primaryStage.setScene(scene);
+//        primaryStage.show();
+//
+//        connect();
     }
 }

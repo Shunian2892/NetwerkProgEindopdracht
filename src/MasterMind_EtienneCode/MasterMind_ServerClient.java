@@ -1,8 +1,9 @@
+package MasterMind_EtienneCode;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
-import java.util.ArrayList;
 
 public class MasterMind_ServerClient implements Runnable{
     private Socket socket;
